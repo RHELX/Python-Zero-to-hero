@@ -1,0 +1,90 @@
+#to get the age
+
+import datetime as dt
+name = input('please enter your name')
+#print(name)
+birth_year= int(input('which year you born'))
+today= dt.datetime.today().year
+age = today - birth_year
+#print(type(birth_year))
+print('Hi '+ name +' your age is '+ str(age))
+
+
+#to get the length of password
+
+import getpass as gp #function that make password invisible while entering 
+Name= input('Enter username ')
+Password= gp.getpass("Enter Password") #when user will enter password it will be hidden in shell
+Pl= len(Password)
+#print(type(Pl))
+#print(Pl * '*') #this will print same no. of * as the no. of word in password
+print('Hi '+ Name+' your password '+ str(Pl * '*')+ ' length is ' + str(Pl) +' letter long')
+
+
+
+#Min and Max from list
+
+n=int(input("how many no. you want to enter"))
+print(n)
+l1=[]
+print(type(l1))
+for i in range(0,n):
+  l1.append(input("enter no."))
+print(l1)
+print('Smallest no. in these is '+ min(l1))
+print('Largest no. in these is '+ max(l1))
+
+
+#Loogical operator
+
+# is_magician= bool(input("Is He/She a Magician True/False "))
+# #print(type(is_magician))
+# is_expert= bool(input("Is He/She a expert True/False"))
+is_magician= True
+print(type(is_magician))
+is_expert= True
+#print(type(is_expert))
+if is_magician == True and is_expert == True:
+  print("You are a master magician")
+elif is_magician== True and is_expert== False:
+  print("Atleast you are getting there")
+else:
+  print("you need magic power")
+
+
+#counting no. of item in list
+
+n= int(input('no. of element in list '))
+print(type(n))
+l=[]
+for i in range(0, n):
+  l.append(input('enter no.'))
+count= 0
+for i in l:
+  count+=1
+print(count)
+print(l)
+
+#Enamurate
+
+l1= ['a', 'b','c', 'd', 'e', 'd']
+
+for i,j in enumerate(l1):
+ if l1.count(j) > 1:
+  print(i, j)
+    
+
+
+# TEsla: To check if you can drive or not
+
+Name= input("what's your name ")
+Age= int(input("Please enter your age "))
+#print(type(Age))
+
+if 100>Age>=18:
+  print("Congratulations \n \n Hi\n\n" + Name +', You are eligible to Drive')
+elif Age<18:
+  diff= 18 - Age
+  print("Sorry "+ Name +" You have "+ str(diff) +" year time to get driving license")
+else:
+  print("Sorry "+ Name +" Wrong age")
